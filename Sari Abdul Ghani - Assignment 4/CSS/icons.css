@@ -1,0 +1,17 @@
+.menu-ico{
+    background: url("../icons/menu-icon-2.png");
+}
+
+.ico{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background-size: cover;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.ico-l{
+    width: 24px;
+    height: 24px;
+}
