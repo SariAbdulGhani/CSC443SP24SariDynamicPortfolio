@@ -135,97 +135,40 @@
 
 
             <div class="align-center">
-                <div class="thumb">
-                    <a href="#Open_in_Same_page1" class="point_on">
-                        <img src="../images/About me Images/Photo1Thumb.png">
-                    </a>
-                </div>
+            <?php 
+            $List_of_images = file("Image_Names.txt");
 
-                <div class="thumb">
-                    <a href="#Open_in_Same_page2" class="point_on">
-                        <img src="../images/About me Images/Photo2Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page3" class="point_on">
-                        <img src="../images/About me Images/Photo3Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page4" class="point_on">
-                        <img src="../images/About me Images/Photo4Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page5" class="point_on">
-                        <img src="../images/About me Images/Photo5Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page6" class="point_on">
-                        <img src="../images/About me Images/Photo6Thumb.png">
-                    </a>
-                </div>
-
-            </div>
-
-            <div id="Open_in_Same_page1" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
+            foreach ($List_of_images as $number => $name_of_file){
+                $thumbnail = "../images/About me Images/{$name_of_file}Thumb.png";
+            ?>
+            <div class="thumb">
+                <a href="#Open_in_Same_page<?= $number+ 1?>" class="point_on">
+                    <img src="<?=$thumbnail?>">
                 </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo1.jpeg">
-                </div>
             </div>
 
-            <div id="Open_in_Same_page2" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo2.jpeg">
-                </div>
-            </div>
+            <?php } ?>
 
-            <div id="Open_in_Same_page3" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo3.jpg">
-                </div>
-            </div>
 
-            <div id="Open_in_Same_page4" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo4.jpeg">
-                </div>
-            </div>
+            <?php
+            $List_of_images = file("Image_Names.txt");
 
-            <div id="Open_in_Same_page5" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo5.jpeg">
-                </div>
-            </div>
+            foreach ($List_of_images as $number => $name_of_file){
+                $full_image = "../images/About me Images/{$name_of_file}.jpeg";
+            ?>
 
-            <div id="Open_in_Same_page6" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/About me Images/Photo6.jpeg">
-                </div>
+        <div id="Open_in_Same_page<?= $number+1 ?>" class="background">
+            <a href="">
+                <div class="Back-button">Back to Gallery</div>
+            </a>
+            <div class="background2">
+                <img src="<?=$full_image ?>">
             </div>
+        </div>
+
+        <?php } ?>
+        </div>
+
             <div class="div-100 div-left" id="footer">
                 <h3 class="mar-to-left align-center"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact
                     Information</h3>

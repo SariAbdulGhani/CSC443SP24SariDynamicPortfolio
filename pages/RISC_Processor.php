@@ -30,10 +30,13 @@
                 </div>
             </div>
         </div>
-        <div class="div-70 div-left">
+        <div class="div-60 div-left">
             <div class="wellcome-div">
-                <span>If your ship doesn’t come in, swim out to it!</span>
+                <span>WELCOME <?php echo $_SESSION["username"] ; ?> </span>
             </div>
+        </div>
+        <div class="div-10 div-left">
+            <span> <a href="../index.php" class="wellcome-div">Logout: <i class="fa fa-sign-out" aria-hidden="true"></i> </a></span>
         </div>
     </div>
 
@@ -107,97 +110,39 @@
 
 
             <div class="align-center">
-                <div class="thumb">
-                    <a href="#Open_in_Same_page1" class="point_on">
-                        <img src="../images/CO Images/Photo1Thumb.png">
-                    </a>
-                </div>
+            <?php 
+            $List_of_images = file("Image_Names.txt");
 
-                <div class="thumb">
-                    <a href="#Open_in_Same_page2" class="point_on">
-                        <img src="../images/CO Images/Photo2Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page3" class="point_on">
-                        <img src="../images/CO Images/Photo3Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page4" class="point_on">
-                        <img src="../images/CO Images/Photo4Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page5" class="point_on">
-                        <img src="../images/CO Images/Photo5Thumb.png">
-                    </a>
-                </div>
-
-                <div class="thumb">
-                    <a href="#Open_in_Same_page6" class="point_on">
-                        <img src="../images/CO Images/Photo6Thumb.png">
-                    </a>
-                </div>
-
-            </div>
-
-            <div id="Open_in_Same_page1" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
+            foreach ($List_of_images as $number => $name_of_file){
+                $thumbnail = "../images/CO Images/{$name_of_file}Thumb.png";
+            ?>
+            <div class="thumb">
+                <a href="#Open_in_Same_page<?= $number+ 1?>" class="point_on">
+                    <img src="<?=$thumbnail?>">
                 </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo1.png">
-                </div>
             </div>
 
-            <div id="Open_in_Same_page2" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo2.png">
-                </div>
-            </div>
+            <?php } ?>
 
-            <div id="Open_in_Same_page3" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo3.png">
-                </div>
-            </div>
+            
+            <?php
+            $List_of_images = file("Image_Names.txt");
 
-            <div id="Open_in_Same_page4" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo4.png">
-                </div>
-            </div>
+            foreach ($List_of_images as $number => $name_of_file){
+                $full_image = "../images/CO Images/{$name_of_file}.png";
+            ?>
 
-            <div id="Open_in_Same_page5" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo5.png">
-                </div>
+        <div id="Open_in_Same_page<?= $number+1 ?>" class="background">
+            <a href="">
+                <div class="Back-button">Back to Gallery</div>
+            </a>
+            <div class="background2">
+                <img src="<?=$full_image ?>">
             </div>
+        </div>
 
-            <div id="Open_in_Same_page6" class="background">
-                <a href="">
-                    <div class="Back-button">Back to Gallery</div>
-                </a>
-                <div class="background2">
-                    <img src="../images/CO Images/Photo6.png">
-                </div>
-            </div>
+        <?php } ?>
+        </div>
 
             <h3 class="mar-to-left">Please click below to open the design phase pdf of the project:</h3>
 

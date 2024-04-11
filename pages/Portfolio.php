@@ -46,9 +46,9 @@
                         Normalization proccess, where all relations
                         were finalized according to specific criteria, and where the database was finally done.<br><br>
 
-                        Please click below or click on the menu option to access the Project's detailed description and
+                        Please click below to access the Project's detailed description and
                         gallery.
-                        <a href="Fly_Haraty.html" class="link-display">
+                        <a href="Fly_Haraty.php" class="link-display">
                             <div class="listing-info"><i class="fa fa-plane"></i> Fly Haraty</div>
                         </a>
                     </p>
@@ -75,9 +75,9 @@
                         which answers
                         to some major questions listed in the project description.<br><br>
 
-                        Please click below or click on the menu option to access the Project's detailed description and
+                        Please click below to access the Project's detailed description and
                         gallery.
-                        <a href="RISC_Processor.html" class="link-display">
+                        <a href="RISC_Processor.php" class="link-display">
                             <div class="listing-info"><i class="fa fa-cogs"></i> RISC Processor</div>
                         </a>
                     </p>

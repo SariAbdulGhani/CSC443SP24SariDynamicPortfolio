@@ -29,10 +29,13 @@
                 </div>
             </div>
         </div>
-        <div class="div-70 div-left">
+        <div class="div-60 div-left">
             <div class="wellcome-div">
-                <span>It is better to be hated for what you are than to be loved for what you are not.</span>
+                <span>WELCOME <?php echo $_SESSION["username"] ; ?> </span>
             </div>
+        </div>
+        <div class="div-10 div-left">
+            <span> <a href="../index.php" class="wellcome-div">Logout: <i class="fa fa-sign-out" aria-hidden="true"></i> </a></span>
         </div>
     </div>
 
@@ -107,96 +110,38 @@
 
 
         <div class="align-center">
+            <?php 
+            $List_of_images = file("Image_Names.txt");
+
+            foreach ($List_of_images as $number => $name_of_file){
+                $thumbnail = "../images/DBMS_Images/{$name_of_file}Thumb.png";
+            ?>
             <div class="thumb">
-                <a href="#Open_in_Same_page1" class="point_on">
-                    <img src="../images/DBMS Images/Photo1Thumb.png">
+                <a href="#Open_in_Same_page<?= $number+ 1?>" class="point_on">
+                    <img src="<?=$thumbnail?>">
                 </a>
             </div>
 
-            <div class="thumb">
-                <a href="#Open_in_Same_page2" class="point_on">
-                    <img src="../images/DBMS Images/Photo2Thumb.png">
-                </a>
-            </div>
+            <?php } ?>
 
-            <div class="thumb">
-                <a href="#Open_in_Same_page3" class="point_on">
-                    <img src="../images/DBMS Images/Photo3Thumb.png">
-                </a>
-            </div>
 
-            <div class="thumb">
-                <a href="#Open_in_Same_page4" class="point_on">
-                    <img src="../images/DBMS Images/Photo4Thumb.png">
-                </a>
-            </div>
+            <?php
+            $List_of_images = file("Image_Names.txt");
 
-            <div class="thumb">
-                <a href="#Open_in_Same_page5" class="point_on">
-                    <img src="../images/DBMS Images/Photo5Thumb.png">
-                </a>
-            </div>
+            foreach ($List_of_images as $number => $name_of_file){
+                $full_image = "../images/DBMS_Images/{$name_of_file}.png";
+            ?>
 
-            <div class="thumb">
-                <a href="#Open_in_Same_page6" class="point_on">
-                    <img src="../images/DBMS Images/Photo6Thumb.png">
-                </a>
-            </div>
-
-        </div>
-
-        <div id="Open_in_Same_page1" class="background">
+        <div id="Open_in_Same_page<?= $number+1 ?>" class="background">
             <a href="">
                 <div class="Back-button">Back to Gallery</div>
             </a>
             <div class="background2">
-                <img src="../images/DBMS Images/Photo1.png">
+                <img src="<?=$full_image ?>">
             </div>
         </div>
 
-        <div id="Open_in_Same_page2" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="../images/DBMS Images/Photo2.png">
-            </div>
-        </div>
-
-        <div id="Open_in_Same_page3" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="../images/DBMS Images/Photo3.png">
-            </div>
-        </div>
-
-        <div id="Open_in_Same_page4" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="../images/DBMS Images/Photo4.png">
-            </div>
-        </div>
-
-        <div id="Open_in_Same_page5" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="../images/DBMS Images/Photo5.png">
-            </div>
-        </div>
-
-        <div id="Open_in_Same_page6" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="../images/DBMS Images/Photo6.png">
-            </div>
+        <?php } ?>
         </div>
 
         <h3>Please click below to open the pdf of the project:</h3>
