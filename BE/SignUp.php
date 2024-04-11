@@ -22,7 +22,7 @@ $formData = [
 if(file_exists('List_of_Users.csv')){
     if(User_Exists($UserName)){
         echo '<script>alert("Username Already exists, please change your credentials and try again")</script>'; 
-        echo '<script>window.location.href = "../pages/signup.html";</script>';
+        echo '<script>window.location.href = "../pages/signup.php";</script>';
     }
     else{
         $List_of_Users = 'List_of_Users.csv';
