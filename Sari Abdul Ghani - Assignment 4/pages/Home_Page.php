@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
+
 <head>
     <link rel="stylesheet" href="../CSS/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -7,35 +14,7 @@
 </head>
 
 <body class="background-c">
-    <div class="background-menu" id="header">
-        <div class="div-30 div-left">
-            <div id="dropdown-menu">
-                <span><i class="ico menu-ico"></i>MENU</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <a href="CV.html">
-                            <li><i class="fa fa-file" aria-hidden="true"></i> My CV</li>
-                        </a>
-                        <a href="Portfolio.html">
-                            <li><i class="fa fa-archive" aria-hidden="true"></i> My Portfolio</li>
-                        </a>
-                        <a href="About_Me.html">
-                            <li><i class="fa fa-male" aria-hidden="true"></i> About Me</li>
-                        </a>
-                        <a href="Contact_Us.html">
-                            <li><i class="fa fa-info-circle" aria-hidden="true"></i> Contact Us</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="div-70 div-left">
-            <div class="wellcome-div">
-                <span>The only limit to our realization of tomorrow will be our doubts of today.</span>
-            </div>
-        </div>
-    </div>
+    <?php include 'menu.php'; ?>
     <div class="div-100 div-left background-c2 white pad-to-bottom mar-to-top2">
         <h1 class="align-center">WELLCOME TO MY HOME PAGE <i class="fa fa-home" aria-hidden="true"></i></h1>
     </div>

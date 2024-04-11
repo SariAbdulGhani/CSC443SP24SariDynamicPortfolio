@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
+
+
 <html>
 
 <head>
@@ -15,7 +23,7 @@
                 <span><i class="ico menu-ico"></i>MENU</span>
                 <div class="dropdown-content">
                     <ul>
-                        <a href="Portfolio.html">
+                        <a href="Portfolio.php">
                             <li><i class="fa fa-archive" aria-hidden="true"></i> My Portfolio</li>
                         </a>
                     </ul>

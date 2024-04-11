@@ -116,6 +116,9 @@ p {
 }
 
 
+.div-10 {
+    width: 10%;
+}
 
 .div-20 {
     width: 20%;
@@ -131,6 +134,10 @@ p {
 
 .div-50 {
     width: 50%;
+}
+
+.div-60 {
+    width: 60%;
 }
 
 .div-70 {
@@ -163,6 +170,9 @@ p {
     border: 2px solid rgb(24, 75, 205);
 }
 
+.div-ib{
+    display: inline-block;
+}
 
 
 
@@ -174,6 +184,9 @@ p {
     margin-top: 50px;
 }
 
+.mar-to-top3{
+    margin-top: 15px;
+}
 .mar-to-bottom {
     margin-bottom: 20px;
 }
@@ -353,10 +366,9 @@ p {
 
 .wellcome-div {
     display: inline-block;
-    height: 50px;
     line-height: 50px;
     width: 100%;
-    vertical-align: middle;
+    text-align: right;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -457,3 +469,107 @@ p {
 :target {
     display: block;
 }
+
+
+
+
+
+
+
+.cont{
+    width: 70%;
+    border: white 1px solid;
+    margin:auto;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.back{
+    background-color: azure;
+}
+
+.img-cover{
+   margin: 10px;
+   
+}
+.log-img{
+    object-fit: fill;
+    width: 100%;
+}
+
+.form-font{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;    
+    font-size: 120%;
+}
+.form-font2{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 120%;
+    color: black;
+}
+
+.titles{
+    font: bold;
+    font-size: 60px;    
+}
+
+.titles2{
+    font: bold;
+    font-size: 60px;
+    margin-bottom: 50px;    
+}
+
+.form-cont{
+    padding: 10px;
+}
+
+.for-labels{
+    border: none;
+    border-bottom: 1px solid;
+    padding: 5px;
+    width: 90%;
+    margin-left: 5px;
+    height: 40px;
+}
+.mar-to-bottom3{
+    margin-bottom: 40px;
+}
+.mar-to-bottom2{
+    margin-bottom:  15px;
+}
+.for-icon{
+    border-bottom: 1px solid;
+}
+
+.button-click{  
+    height: 60px;
+    width: 150px;
+    border-radius: 20px;
+    padding: 5px;
+    background: grey;
+    color: white;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.button-click:hover{
+    background: transparent;
+    color: grey;
+}
+
+.button-1{
+    margin-left: 50px;
+}
+.button-2{
+    margin-right: 50px;
+}
+
+.center-div{
+    width: 30%;
+    margin: auto;
+}
+

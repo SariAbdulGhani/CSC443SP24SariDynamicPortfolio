@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
+
 <html>
 
 <head>
@@ -9,35 +16,7 @@
 </head>
 
 <body class="background-c">
-    <div class="background-menu" id="header">
-        <div class="div-30 div-left">
-            <div id="dropdown-menu">
-                <span><i class="ico menu-ico"></i>MENU</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <a href="Home_Page.html">
-                            <li><i class="fa fa-home" aria-hidden="true"></i> Home Page</li>
-                        </a>
-                        <a href="CV.html">
-                            <li><i class="fa fa-file" aria-hidden="true"></i> My CV</li>
-                        </a>
-                        <a href="Portfolio.html">
-                            <li><i class="fa fa-archive" aria-hidden="true"></i> My Portfolio</li>
-                        </a>
-                        <a href="Contact_Us.html">
-                            <li><i class="fa fa-info-circle" aria-hidden="true"></i> Contact Us</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="div-70 div-left">
-            <div class="wellcome-div">
-                <span>Do the best you can until you know better, then when you know better, do better.</span>
-            </div>
-        </div>
-    </div>
+    <?php include 'menu.php'; ?>
     <div class="div-100 div-left background-c2 white pad-to-bottom mar-to-top">
         <h1 class="align-center">WELLCOME TO MY BIO</h1>
         <h3 class="align-center white">Here, you can see my soft skills and hobbies, and thus my real presonality!</h3>

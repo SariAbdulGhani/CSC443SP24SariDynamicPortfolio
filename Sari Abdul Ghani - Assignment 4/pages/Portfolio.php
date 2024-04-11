@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
+
 <html>
 
 <head>
@@ -9,47 +16,7 @@
 </head>
 
 <body class="background-c">
-    <div class="background-menu" id="header">
-        <div class="div-20 div-left">
-            <div id="dropdown-menu">
-                <span><i class="ico menu-ico"></i>MENU</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <a href="Home_Page.html">
-                            <li><i class="fa fa-home" aria-hidden="true"></i> Home Page</li>
-                        </a>
-                        <a href="CV.html">
-                            <li><i class="fa fa-file" aria-hidden="true"></i> My CV</li>
-                        </a>
-                        <a href="About_Me.html">
-                            <li><i class="fa fa-male" aria-hidden="true"></i> About Me</li>
-                        </a>
-                        <a href="Contact_Us.html">
-                            <li><i class="fa fa-info-circle" aria-hidden="true"></i> Contact Us</li>
-                        </a>
-                        <a href="Fly_Haraty.html">
-                            <li><i class="fa fa-plane"></i> Fly Haraty</li>
-                        </a>
-                        <a href="RISC_Processor.html">
-                            <li><i class="fa fa-cogs"></i> RISC Processor</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="div-80 div-left">
-            <div class="wellcome-div">
-                Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all,
-                love of what you are doing or learning to do.
-            </div>
-        </div>
-
-    </div>
-
-
-
+    <?php include 'menu.php'; ?>
     <div class="div-100 div-left background-c2 white pad-to-bottom mar-to-top">
         <h1 class="align-center">WELLCOME TO MY PORTFOLIO</h1>
         <h3 class="align-center white">Here you can find the two projects that I have worked on. Please click on the

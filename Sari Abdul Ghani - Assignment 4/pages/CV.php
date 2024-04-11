@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
+
+
 <html>
 
 <head>
@@ -9,36 +17,7 @@
 </head>
 
 <body class="background-c">
-
-    <div class="background-menu" id="header">
-        <div class="div-30 div-left">
-            <div id="dropdown-menu">
-                <span><i class="ico menu-ico"></i>MENU</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <a href="Home_Page.html">
-                            <li><i class="fa fa-home" aria-hidden="true"></i> Home Page</li>
-                        </a>
-                        <a href="Portfolio.html">
-                            <li><i class="fa fa-archive" aria-hidden="true"></i> My Portfolio</li>
-                        </a>
-                        <a href="About_Me.html">
-                            <li><i class="fa fa-male" aria-hidden="true"></i> About Me</li>
-                        </a>
-                        <a href="Contact_Us.html">
-                            <li><i class="fa fa-info-circle" aria-hidden="true"></i> Contact Us</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="div-70 div-left">
-            <div class="wellcome-div">
-                <span>Be loyal to what matters.</span>
-            </div>
-        </div>
-    </div>
-
+    <?php include 'menu.php'; ?>
     <div class="content" id="text-ul">
         <div class="div-30 div-left">
             <div class="img-frame">
