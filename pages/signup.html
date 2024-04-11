@@ -93,7 +93,7 @@
             if ((un=="")||(pass=="")||(cpass=="")||(fn=="")||(ln=="")||(email=="")||(date="")){
                 alert("Arguments missing!");
             }
-            else if(pass.value !== cpass.value){
+            else if(pass.localeCompare(cpass)){
                 alert("Password not the same");
                 document.getElementById("pass").value = "";
                 document.getElementById("cpass").value = "";
