@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+    <link rel="stylesheet" href="../CSS/icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/Sari's Icon.png" />
+</head>
+<body class="back">
+    <div class="cont">
+        <div class="div-50 div-left">
+            <div class="form-font2 titles2">Sign Up</div>
+            
+            <form action="../BE/SignUp.php" method="POST" id="signup-form">
+                <div class="form-font2"><label for="un">User Name </label> </div>
+                <br>
+                <i class="fa fa-user-circle" aria-hidden="true"></i><input type="text" name="username" class="for-labels mar-to-bottom2" id="uname">
+                <br>
+
+
+                <div class="form-font2"><label for="fn">First Name </label> </div>
+                <br>
+                <i class="fa fa-address-book" aria-hidden="true"></i><input type="text" name="firstname" class="for-labels mar-to-bottom2" id="fn">
+                <br>
+
+                <div class="form-font2 "><label for="ln">Last Name </label> </div>
+                <br>
+                <i class="fa fa-address-book-o" aria-hidden="true"></i><input type="text" name="lastname" class="for-labels mar-to-bottom2" id="ln">
+                <br>
+
+                <div class="form-font2"><label for="em">Email </label> </div>
+                <br>
+                <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" class="for-labels mar-to-bottom2" id="em">
+                <br>
+
+
+                <div class="form-font2"><label for="dob">Date of Birth </label></div>
+                <br>
+                <input type="date" class="for-labels mar-to-bottom2" id="dob" name="dob">
+                <br>
+
+
+
+                <div class="form-font2"><label for="pass">Password </label> </div>
+                <br>
+                <i class="fa fa-lock" aria-hidden="true"></i><input type="password" name="password" class="for-labels mar-to-bottom2" id="pass">
+                <br>
+
+                <div class="form-font2"><label for="cpass">Confirm Password </label> </div>
+                <br>
+                <i class="fa fa-lock" aria-hidden="true"></i><input type="password" name="confirmpassword" class="for-labels mar-to-bottom2" id="cpass">
+                <br>
+
+
+                <input type="radio" name="sex" checked id="male" value="male">
+                <div class="form-font2 div-ib pad-to-right mar-to-top3"><label for="male">Male</label></div>
+                <input type="radio" name="sex" id="female" value="female">
+                <div class="form-font2 div-ib"><label for="female">Female</label></div>
+
+
+            </form>
+        </div>
+
+        <div class="div-50 div-left">
+            <div class="form-cont">
+                <div class="form-font titles">Greetings!</div>
+                <div class="form-font">Let me sign you up in the sytem ...</div>
+            </div>
+            <div class="img-cover mar-to-bottom3">
+                <img class="log-img" src="../images/sign-up.png">
+            </div>
+            <div class="div-100 div-left mar-to-top3">
+                <input type="button" value="Signup" class="button-click button-1 div-left" onclick="sign_up()">
+                <input type="button" value="Cancel" class="button-click button-2 div-right" onclick="Reset()">
+            </div>
+            <div class="div-100 div-left">
+                <p class="form-font2">Already have an account?</p>
+                <div class="center-div"><button class="button-click" onclick="location.href='../index.php';">Log In</button></div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function sign_up(){
+            let un = document.getElementById("uname").value;
+            let pass = document.getElementById("pass").value;
+            let cpass = document.getElementById("cpass").value;
+            let fn = document.getElementById("fn").value;
+            let ln = document.getElementById("ln").value;
+            let email= document.getElementById("em").value;
+            let date = document.getElementById("dob").value;
+            if ((un=="")||(pass=="")||(cpass="")||(fn=="")||(ln=="")||(email=="")||(date="")){
+                alert("Arguments missing!");
+            }
+            else if(pass.value !== cpass.value){
+                alert("Password not the same");
+                document.getElementById("pass").value = "";
+                document.getElementById("cpass").value = "";
+            }
+            else if(pass.length<8){
+                alert("Password must be at least 8 characters");
+            }
+            else{
+                document.getElementById("signup-form").submit();
+            }
+        }
+
+        function Reset(){
+            document.getElementById("uname").value = "";
+            document.getElementById("fn").value = "";
+            document.getElementById("ln").value = "";
+            document.getElementById("em").value = "";
+            document.getElementById("pass").value = "";
+            document.getElementById("cpass").value = "";
+            document.getElementById("dob").value="";
+        }
+    </script>
+</body>
+</html>
