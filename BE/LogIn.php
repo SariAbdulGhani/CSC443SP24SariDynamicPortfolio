@@ -19,10 +19,11 @@ else{
 
 function User_Exists($UN,$PASS){
     $path = '../BE/List_of_Users.csv';
-    $handle = fopen($path, "r");
-    while (($data = fgetcsv($handle)) !== FALSE) {
-        if ($data[0] == $UN && $data[1] == $PASS) {
-            return 1;
+    if($handle = fopen($path, "r")!=FALSE){
+        while (($data = fgetcsv($handle)) !== FALSE) {
+            if ($data[0] == $UN && $data[1] == $PASS) {
+                return 1;
+            }
         }
     }
     return 0;
