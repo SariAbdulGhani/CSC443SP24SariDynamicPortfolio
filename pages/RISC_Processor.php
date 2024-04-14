@@ -36,7 +36,9 @@
             </div>
         </div>
         <div class="div-10 div-left">
-            <span> <a href="../index.php" class="wellcome-div">Logout: <i class="fa fa-sign-out" aria-hidden="true"></i> </a></span>
+            <a href="../logout.php" class="wellcome-div2">
+                Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 
@@ -132,17 +134,17 @@
                 $full_image = "../images/CO Images/{$name_of_file}.png";
             ?>
 
-        <div id="Open_in_Same_page<?= $number+1 ?>" class="background">
-            <a href="">
-                <div class="Back-button">Back to Gallery</div>
-            </a>
-            <div class="background2">
-                <img src="<?=$full_image ?>">
+            <div id="Open_in_Same_page<?= $number+1 ?>" class="background">
+                <a href="">
+                    <div class="Back-button">Back to Gallery</div>
+                 </a>
+                <div class="background2">
+                    <img src="<?=$full_image ?>">
+                </div>
             </div>
-        </div>
 
-        <?php } ?>
-        </div>
+            <?php } ?>
+            </div>
 
             <h3 class="mar-to-left">Please click below to open the design phase pdf of the project:</h3>
 

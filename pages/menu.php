@@ -30,10 +30,12 @@
 
         <div class="div-60 div-left">
             <div class="wellcome-div">
-                <span>WELLCOME <?php echo $_SESSION["username"] ; ?> </span>
+                <span>WELCOME <?php echo $_SESSION["username"] ; ?> </span>
             </div>
         </div>
         <div class="div-10 div-left">
-            <span> <a href="../index.php" class="wellcome-div">Logout: <i class="fa fa-sign-out" aria-hidden="true"></i> </a></span>
+            <a href="../logout.php" class="wellcome-div2">
+                Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
         </div>
-    </div>
+</div>

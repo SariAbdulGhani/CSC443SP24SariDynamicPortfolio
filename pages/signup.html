@@ -90,16 +90,16 @@
             let ln = document.getElementById("ln").value;
             let email= document.getElementById("em").value;
             let date = document.getElementById("dob").value;
-            if ((un=="")||(pass=="")||(cpass=="")||(fn=="")||(ln=="")||(email=="")||(date="")){
+            if ((un=="")||(pass=="")||(cpass=="")||(fn=="")||(ln=="")||(email=="")||(date==="")){
                 alert("Arguments missing!");
             }
             else if(pass.localeCompare(cpass)){
-                alert("Password not the same");
+                alert("Password is not the same!");
                 document.getElementById("pass").value = "";
                 document.getElementById("cpass").value = "";
             }
             else if(pass.length<8){
-                alert("Password must be at least 8 characters");
+                alert("Password must be at least 8 characters!");
             }
             else{
                 document.getElementById("signup-form").submit();
